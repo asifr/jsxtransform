@@ -2,6 +2,14 @@
 
 Transpiles JSX into Javascript. `jsxtransform` lets your write HTML templates with Javascript in it (JSX) and transform them to `.js` files.
 
+Usage:
+
+```bash
+jsxtransform SOURCE DEST
+```
+
+`SOURCE` is a directory with `.html` files and `DEST` is where the generated `.js` files will be saved to.
+
 Turn this `TodoItem.html` file:
 
 ```html
@@ -75,10 +83,6 @@ function h(tag, attributes) {
 The result is a convenient workflow that doesn't involve node modules and still gives you the ability to generate virtual DOM elements in the browser. The hypertext method is a small function so it doesn't hurt page load times. The code is also vanilla javascript and has no dependencies, further reducing bloat and load times.
 
 Some small projects won't need node modules and you may want a binary to convert `.html` to `.js` files. In this case use the provided binaries:
-
-```bash
-jsxtransform SOURCE DEST
-```
 
 Here I use `pkg` to generate binaries from your node modules.
 
